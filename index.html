@@ -187,6 +187,100 @@
           
           
             
+              <a class="post-title-link" href="/2015/09/30/第一篇文章/" itemprop="url">
+                未命名
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2015-09-30T22:59:10+08:00" content="2015-09-30">
+            2015-09-30
+          </time>
+        </span>
+
+        
+
+        
+          
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><p>title: mac下安装node.js<br>date: 2015-09-30 22:02:57</p>
+<h2 id="Mac_下安装Node-js">Mac 下安装Node.js</h2><h3 id="安装方式">安装方式</h3><ul>
+<li>package 安装</li>
+<li>Homebrew 直接安装</li>
+<li>Homebrew 安装 nvm –&gt; nvm 安装 Node.js</li>
+</ul>
+<h5 id="简单介绍上面三种安装方式">简单介绍上面三种安装方式</h5><p><strong>package</strong>:官网 <a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a> 直接下载安装。</p>
+<p><strong>Homebrew</strong>: OS X 不可或缺的套件管理器。Mac OS X是基于Unix的操作系统，可以安装大部分为Unix/Linux开发的软件。然而，如果只是以使用为目的，对每个软件都进行手工编译不是很方便，也不利于管理已安装的软件，于是出现了类似于Linux中APT、Yum等类似的软件包管理系统，其中最著名的有MacPorts、Fink、Homebrew等。</p>
+<blockquote>
+<p>使用感受：安装各种包很方便。</p>
+</blockquote>
+<p><strong>Homebrew 安装 nvm –&gt; nvm 安装 Node.js</strong>:我使用的就是这种方式，下面会进行详细介绍。</p>
+<h4 id="第一步：安装Homebrew">第一步：安装Homebrew</h4><ol>
+<li><code>$ ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</code></li>
+<li><code>$ brew update</code> 保证安装的是最新版本。</li>
+<li>运行 <code>$ brew doctor</code> 以确保系统已经能正常使用brew，如果出现任何建议，依照提示操作。</li>
+<li>确认后，使用 <code>$ export PATH=&quot;/usr/local/bin:$PATH&quot;</code> 将brew的路径添加到环境变量（windows的说法）</li>
+</ol>
+<h4 id="第二步：安装nvm">第二步：安装nvm</h4><p><strong>nvm （ Node Version Manager ）, 可切換Node.js版本</strong></p>
+<ol>
+<li><code>$ brew install nvm</code></li>
+<li>安裝完後，為了讓你可以直接在shell使用nvm指令，必須在你的 .bash_profile 加入以下這行<code>source $(brew --prefix nvm)/nvm.sh</code> .bash_profile路径：/Users/username/ ，属于隐藏文件，用vim编辑。</li>
+<li><code>$ . ~/.bash_profile</code> 设定生效</li>
+</ol>
+<h4 id="第三步：安装Node-js">第三步：安装Node.js</h4><ol>
+<li>查看哪些版本可以安装<code>$ nvm ls-remote</code></li>
+<li><code>$ nvm install &lt;version&gt;</code> e.g: <code>$ nvm install v0.10.24</code></li>
+<li><code>$ nvm install v4.1.1</code> 安装最新版本来测试nvm切换版本功能</li>
+<li><code>$ nvm ls</code> 查看nvm 可以管理的版本有哪些</li>
+<li><code>$ nvm use &lt;version&gt;</code> 切换版本。e.g:<code>$ nvm use v0.10.24</code></li>
+<li>指定预设的node版本。<code>$ nvm alias default 4.1.4</code></li>
+</ol>
+<p>tags:mac,Node.js,nvm,</p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2015/09/30/hello-world/" itemprop="url">
                 Hello World
               </a>
@@ -280,7 +374,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
